@@ -9,13 +9,51 @@
 /* Begin PBXBuildFile section */
 		EF0D8E6B2CFA4A8400F1ED63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0D8E6A2CFA4A8400F1ED63 /* AppDelegate.swift */; };
 		EF0D8E6D2CFA4A8400F1ED63 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0D8E6C2CFA4A8400F1ED63 /* SceneDelegate.swift */; };
-		EF0D8E6F2CFA4A8400F1ED63 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0D8E6E2CFA4A8400F1ED63 /* ViewController.swift */; };
-		EF0D8E722CFA4A8400F1ED63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF0D8E702CFA4A8400F1ED63 /* Main.storyboard */; };
 		EF0D8E742CFA4A8900F1ED63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF0D8E732CFA4A8900F1ED63 /* Assets.xcassets */; };
 		EF0D8E772CFA4A8900F1ED63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF0D8E752CFA4A8900F1ED63 /* LaunchScreen.storyboard */; };
 		EF0D8E822CFA4A8A00F1ED63 /* GitReposAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0D8E812CFA4A8A00F1ED63 /* GitReposAppTests.swift */; };
 		EF0D8E8C2CFA4A8A00F1ED63 /* GitReposAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0D8E8B2CFA4A8A00F1ED63 /* GitReposAppUITests.swift */; };
 		EF0D8E8E2CFA4A8A00F1ED63 /* GitReposAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0D8E8D2CFA4A8A00F1ED63 /* GitReposAppUITestsLaunchTests.swift */; };
+		EF0D8E9C2CFA4CB700F1ED63 /* GithubEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0D8E9B2CFA4CB700F1ED63 /* GithubEndpoint.swift */; };
+		EF0D8EA02CFA66BE00F1ED63 /* RemoteResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0D8E9F2CFA66BE00F1ED63 /* RemoteResponse.swift */; };
+		EF0D8EA22CFA6FB000F1ED63 /* EndpointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0D8EA12CFA6FB000F1ED63 /* EndpointType.swift */; };
+		EF0D8EA42CFA70B800F1ED63 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0D8EA32CFA70B800F1ED63 /* NetworkService.swift */; };
+		EF0D8EA62CFB1E1B00F1ED63 /* RemoteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0D8EA52CFB1E1B00F1ED63 /* RemoteManager.swift */; };
+		EF0D8EA82CFB1E9B00F1ED63 /* RemoteManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0D8EA72CFB1E9B00F1ED63 /* RemoteManagerTests.swift */; };
+		EF0D8EAD2CFB2A2F00F1ED63 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0D8EAC2CFB2A2F00F1ED63 /* MockURLProtocol.swift */; };
+		EF0D8EAF2CFB2D3B00F1ED63 /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0D8EAE2CFB2D3B00F1ED63 /* NetworkServiceTests.swift */; };
+		EF0D8EB12CFB34B000F1ED63 /* MockEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0D8EB02CFB34B000F1ED63 /* MockEndpoints.swift */; };
+		EF0D8EB32CFB3D4E00F1ED63 /* MockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0D8EB22CFB3D4E00F1ED63 /* MockModel.swift */; };
+		EFAE35E52CFF8B3000E9B00A /* RealmStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAE35E42CFF8B3000E9B00A /* RealmStorageService.swift */; };
+		EFAE35E72CFF8BC800E9B00A /* MockStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAE35E62CFF8BC800E9B00A /* MockStorageService.swift */; };
+		EFAE35EB2CFF8EFF00E9B00A /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAE35EA2CFF8EFF00E9B00A /* AppDIContainer.swift */; };
+		EFAE35ED2CFF8F3900E9B00A /* ReposSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAE35EC2CFF8F3900E9B00A /* ReposSceneDIContainer.swift */; };
+		EFAE35F02CFF939600E9B00A /* ReposListFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAE35EF2CFF939600E9B00A /* ReposListFlowCoordinator.swift */; };
+		EFAE35F22CFF956C00E9B00A /* AppFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAE35F12CFF956C00E9B00A /* AppFlowCoordinator.swift */; };
+		EFAE35F72D00C4C100E9B00A /* ReposListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAE35F62D00C4C100E9B00A /* ReposListInteractorTests.swift */; };
+		EFAE35F92D00C62800E9B00A /* MockRemoteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAE35F82D00C62800E9B00A /* MockRemoteManager.swift */; };
+		EFAE35FB2D00C65E00E9B00A /* MockStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAE35FA2D00C65E00E9B00A /* MockStorageManager.swift */; };
+		EFAE35FD2D00C9D600E9B00A /* MockError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAE35FC2D00C9D600E9B00A /* MockError.swift */; };
+		EFC75D5F2CFB69E000DF13F5 /* MockNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC75D5E2CFB69E000DF13F5 /* MockNetworkService.swift */; };
+		EFC75D632CFBC96B00DF13F5 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EFC75D622CFBC96B00DF13F5 /* RealmSwift */; };
+		EFC75D652CFBD06200DF13F5 /* StorageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC75D642CFBD06200DF13F5 /* StorageResponse.swift */; };
+		EFC75D692CFBD85400DF13F5 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC75D682CFBD85400DF13F5 /* StorageService.swift */; };
+		EFC75D702CFBE25600DF13F5 /* StorageServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC75D6F2CFBE25600DF13F5 /* StorageServiceTests.swift */; };
+		EFC75D722CFC611300DF13F5 /* TestObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC75D712CFC611300DF13F5 /* TestObject.swift */; };
+		EFC75D752CFC68EB00DF13F5 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EFC75D742CFC68EB00DF13F5 /* RealmSwift */; };
+		EFC75D772CFC68EB00DF13F5 /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = EFC75D742CFC68EB00DF13F5 /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		EFC75D792CFC7B5100DF13F5 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC75D782CFC7B5100DF13F5 /* StorageManager.swift */; };
+		EFC75D7C2CFCD3A200DF13F5 /* ReposListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC75D7B2CFCD3A200DF13F5 /* ReposListInteractor.swift */; };
+		EFC75D7F2CFCD45600DF13F5 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC75D7E2CFCD45600DF13F5 /* Repository.swift */; };
+		EFC75D812CFCD60000DF13F5 /* ReposFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC75D802CFCD60000DF13F5 /* ReposFilter.swift */; };
+		EFC75D852CFE252500DF13F5 /* StorageManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC75D842CFE252500DF13F5 /* StorageManagerTests.swift */; };
+		EFC75D8B2CFE2DA000DF13F5 /* ReposListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC75D8A2CFE2D9F00DF13F5 /* ReposListViewModel.swift */; };
+		EFC75D8D2CFE2DE100DF13F5 /* ReposListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC75D8C2CFE2DE100DF13F5 /* ReposListItem.swift */; };
+		EFD3D98C2CFE5AE200F7BFF2 /* ReposListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD3D98A2CFE5AE200F7BFF2 /* ReposListCell.swift */; };
+		EFD3D98D2CFE5AE200F7BFF2 /* ReposListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFD3D98B2CFE5AE200F7BFF2 /* ReposListCell.xib */; };
+		EFD3D9902CFE5C8600F7BFF2 /* ReposListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD3D98E2CFE5C8600F7BFF2 /* ReposListViewController.swift */; };
+		EFD3D9912CFE5C8600F7BFF2 /* ReposListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFD3D98F2CFE5C8600F7BFF2 /* ReposListViewController.xib */; };
+		EFE5F88C2D0107C600A79BD1 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE5F88B2D0107C600A79BD1 /* ImageLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,12 +73,24 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		EFC75D762CFC68EB00DF13F5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EFC75D772CFC68EB00DF13F5 /* RealmSwift in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		EF0D8E672CFA4A8400F1ED63 /* GitReposApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitReposApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF0D8E6A2CFA4A8400F1ED63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF0D8E6C2CFA4A8400F1ED63 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EF0D8E6E2CFA4A8400F1ED63 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		EF0D8E712CFA4A8400F1ED63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EF0D8E732CFA4A8900F1ED63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF0D8E762CFA4A8900F1ED63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF0D8E782CFA4A8900F1ED63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +99,43 @@
 		EF0D8E872CFA4A8A00F1ED63 /* GitReposAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitReposAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF0D8E8B2CFA4A8A00F1ED63 /* GitReposAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitReposAppUITests.swift; sourceTree = "<group>"; };
 		EF0D8E8D2CFA4A8A00F1ED63 /* GitReposAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitReposAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EF0D8E9B2CFA4CB700F1ED63 /* GithubEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubEndpoint.swift; sourceTree = "<group>"; };
+		EF0D8E9F2CFA66BE00F1ED63 /* RemoteResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteResponse.swift; sourceTree = "<group>"; };
+		EF0D8EA12CFA6FB000F1ED63 /* EndpointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointType.swift; sourceTree = "<group>"; };
+		EF0D8EA32CFA70B800F1ED63 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		EF0D8EA52CFB1E1B00F1ED63 /* RemoteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteManager.swift; sourceTree = "<group>"; };
+		EF0D8EA72CFB1E9B00F1ED63 /* RemoteManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteManagerTests.swift; sourceTree = "<group>"; };
+		EF0D8EAC2CFB2A2F00F1ED63 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
+		EF0D8EAE2CFB2D3B00F1ED63 /* NetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
+		EF0D8EB02CFB34B000F1ED63 /* MockEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEndpoints.swift; sourceTree = "<group>"; };
+		EF0D8EB22CFB3D4E00F1ED63 /* MockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockModel.swift; sourceTree = "<group>"; };
+		EFAE35E42CFF8B3000E9B00A /* RealmStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmStorageService.swift; sourceTree = "<group>"; };
+		EFAE35E62CFF8BC800E9B00A /* MockStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockStorageService.swift; sourceTree = "<group>"; };
+		EFAE35EA2CFF8EFF00E9B00A /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
+		EFAE35EC2CFF8F3900E9B00A /* ReposSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposSceneDIContainer.swift; sourceTree = "<group>"; };
+		EFAE35EF2CFF939600E9B00A /* ReposListFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposListFlowCoordinator.swift; sourceTree = "<group>"; };
+		EFAE35F12CFF956C00E9B00A /* AppFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowCoordinator.swift; sourceTree = "<group>"; };
+		EFAE35F62D00C4C100E9B00A /* ReposListInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposListInteractorTests.swift; sourceTree = "<group>"; };
+		EFAE35F82D00C62800E9B00A /* MockRemoteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRemoteManager.swift; sourceTree = "<group>"; };
+		EFAE35FA2D00C65E00E9B00A /* MockStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockStorageManager.swift; sourceTree = "<group>"; };
+		EFAE35FC2D00C9D600E9B00A /* MockError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockError.swift; sourceTree = "<group>"; };
+		EFC75D5E2CFB69E000DF13F5 /* MockNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkService.swift; sourceTree = "<group>"; };
+		EFC75D642CFBD06200DF13F5 /* StorageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageResponse.swift; sourceTree = "<group>"; };
+		EFC75D682CFBD85400DF13F5 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		EFC75D6F2CFBE25600DF13F5 /* StorageServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageServiceTests.swift; sourceTree = "<group>"; };
+		EFC75D712CFC611300DF13F5 /* TestObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestObject.swift; sourceTree = "<group>"; };
+		EFC75D782CFC7B5100DF13F5 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		EFC75D7B2CFCD3A200DF13F5 /* ReposListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposListInteractor.swift; sourceTree = "<group>"; };
+		EFC75D7E2CFCD45600DF13F5 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		EFC75D802CFCD60000DF13F5 /* ReposFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposFilter.swift; sourceTree = "<group>"; };
+		EFC75D842CFE252500DF13F5 /* StorageManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManagerTests.swift; sourceTree = "<group>"; };
+		EFC75D8A2CFE2D9F00DF13F5 /* ReposListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposListViewModel.swift; sourceTree = "<group>"; };
+		EFC75D8C2CFE2DE100DF13F5 /* ReposListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposListItem.swift; sourceTree = "<group>"; };
+		EFD3D98A2CFE5AE200F7BFF2 /* ReposListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposListCell.swift; sourceTree = "<group>"; };
+		EFD3D98B2CFE5AE200F7BFF2 /* ReposListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReposListCell.xib; sourceTree = "<group>"; };
+		EFD3D98E2CFE5C8600F7BFF2 /* ReposListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposListViewController.swift; sourceTree = "<group>"; };
+		EFD3D98F2CFE5C8600F7BFF2 /* ReposListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReposListViewController.xib; sourceTree = "<group>"; };
+		EFE5F88B2D0107C600A79BD1 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +143,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFC75D632CFBC96B00DF13F5 /* RealmSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +151,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFC75D752CFC68EB00DF13F5 /* RealmSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +172,7 @@
 				EF0D8E802CFA4A8A00F1ED63 /* GitReposAppTests */,
 				EF0D8E8A2CFA4A8A00F1ED63 /* GitReposAppUITests */,
 				EF0D8E682CFA4A8400F1ED63 /* Products */,
+				EFC75D732CFC68EB00DF13F5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,10 +189,13 @@
 		EF0D8E692CFA4A8400F1ED63 /* GitReposApp */ = {
 			isa = PBXGroup;
 			children = (
-				EF0D8E6A2CFA4A8400F1ED63 /* AppDelegate.swift */,
-				EF0D8E6C2CFA4A8400F1ED63 /* SceneDelegate.swift */,
-				EF0D8E6E2CFA4A8400F1ED63 /* ViewController.swift */,
-				EF0D8E702CFA4A8400F1ED63 /* Main.storyboard */,
+				EFAE35E82CFF8E7900E9B00A /* Application */,
+				EFC75D862CFE2D5B00DF13F5 /* ReposScene */,
+				EFC75D7D2CFCD44000DF13F5 /* Common */,
+				EFC75D7A2CFCD17500DF13F5 /* Interactors */,
+				EFC75D602CFBC4BF00DF13F5 /* RealmStorage */,
+				EF0D8EA92CFB21C000F1ED63 /* Managers */,
+				EF0D8E9A2CFA4B0700F1ED63 /* Networking */,
 				EF0D8E732CFA4A8900F1ED63 /* Assets.xcassets */,
 				EF0D8E752CFA4A8900F1ED63 /* LaunchScreen.storyboard */,
 				EF0D8E782CFA4A8900F1ED63 /* Info.plist */,
@@ -113,6 +206,11 @@
 		EF0D8E802CFA4A8A00F1ED63 /* GitReposAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				EFAE35F32D00C46F00E9B00A /* ReposScene */,
+				EFC75D6C2CFBE20D00DF13F5 /* RealmStorage */,
+				EFC75D5D2CFB66B700DF13F5 /* Managers */,
+				EF0D8EAB2CFB288A00F1ED63 /* Mocks */,
+				EF0D8EAA2CFB288100F1ED63 /* Networking */,
 				EF0D8E812CFA4A8A00F1ED63 /* GitReposAppTests.swift */,
 			);
 			path = GitReposAppTests;
@@ -125,6 +223,176 @@
 				EF0D8E8D2CFA4A8A00F1ED63 /* GitReposAppUITestsLaunchTests.swift */,
 			);
 			path = GitReposAppUITests;
+			sourceTree = "<group>";
+		};
+		EF0D8E9A2CFA4B0700F1ED63 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				EF0D8E9B2CFA4CB700F1ED63 /* GithubEndpoint.swift */,
+				EF0D8E9F2CFA66BE00F1ED63 /* RemoteResponse.swift */,
+				EF0D8EA12CFA6FB000F1ED63 /* EndpointType.swift */,
+				EF0D8EA32CFA70B800F1ED63 /* NetworkService.swift */,
+				EFE5F88B2D0107C600A79BD1 /* ImageLoader.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		EF0D8EA92CFB21C000F1ED63 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				EF0D8EA52CFB1E1B00F1ED63 /* RemoteManager.swift */,
+				EFC75D782CFC7B5100DF13F5 /* StorageManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		EF0D8EAA2CFB288100F1ED63 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				EF0D8EAE2CFB2D3B00F1ED63 /* NetworkServiceTests.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		EF0D8EAB2CFB288A00F1ED63 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				EF0D8EAC2CFB2A2F00F1ED63 /* MockURLProtocol.swift */,
+				EF0D8EB22CFB3D4E00F1ED63 /* MockModel.swift */,
+				EF0D8EB02CFB34B000F1ED63 /* MockEndpoints.swift */,
+				EFC75D5E2CFB69E000DF13F5 /* MockNetworkService.swift */,
+				EFAE35E62CFF8BC800E9B00A /* MockStorageService.swift */,
+				EFAE35F82D00C62800E9B00A /* MockRemoteManager.swift */,
+				EFAE35FA2D00C65E00E9B00A /* MockStorageManager.swift */,
+				EFAE35FC2D00C9D600E9B00A /* MockError.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		EFAE35E82CFF8E7900E9B00A /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				EF0D8E6A2CFA4A8400F1ED63 /* AppDelegate.swift */,
+				EF0D8E6C2CFA4A8400F1ED63 /* SceneDelegate.swift */,
+				EFAE35E92CFF8E9900E9B00A /* DIContainers */,
+				EFAE35F12CFF956C00E9B00A /* AppFlowCoordinator.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		EFAE35E92CFF8E9900E9B00A /* DIContainers */ = {
+			isa = PBXGroup;
+			children = (
+				EFAE35EA2CFF8EFF00E9B00A /* AppDIContainer.swift */,
+				EFAE35EC2CFF8F3900E9B00A /* ReposSceneDIContainer.swift */,
+			);
+			path = DIContainers;
+			sourceTree = "<group>";
+		};
+		EFAE35EE2CFF935500E9B00A /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				EFAE35EF2CFF939600E9B00A /* ReposListFlowCoordinator.swift */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		EFAE35F32D00C46F00E9B00A /* ReposScene */ = {
+			isa = PBXGroup;
+			children = (
+				EFAE35F62D00C4C100E9B00A /* ReposListInteractorTests.swift */,
+			);
+			path = ReposScene;
+			sourceTree = "<group>";
+		};
+		EFC75D5D2CFB66B700DF13F5 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				EF0D8EA72CFB1E9B00F1ED63 /* RemoteManagerTests.swift */,
+				EFC75D842CFE252500DF13F5 /* StorageManagerTests.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		EFC75D602CFBC4BF00DF13F5 /* RealmStorage */ = {
+			isa = PBXGroup;
+			children = (
+				EFC75D642CFBD06200DF13F5 /* StorageResponse.swift */,
+				EFC75D682CFBD85400DF13F5 /* StorageService.swift */,
+				EFAE35E42CFF8B3000E9B00A /* RealmStorageService.swift */,
+			);
+			path = RealmStorage;
+			sourceTree = "<group>";
+		};
+		EFC75D6C2CFBE20D00DF13F5 /* RealmStorage */ = {
+			isa = PBXGroup;
+			children = (
+				EFC75D6F2CFBE25600DF13F5 /* StorageServiceTests.swift */,
+				EFC75D712CFC611300DF13F5 /* TestObject.swift */,
+			);
+			path = RealmStorage;
+			sourceTree = "<group>";
+		};
+		EFC75D732CFC68EB00DF13F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EFC75D7A2CFCD17500DF13F5 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				EFC75D7B2CFCD3A200DF13F5 /* ReposListInteractor.swift */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		EFC75D7D2CFCD44000DF13F5 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				EFC75D7E2CFCD45600DF13F5 /* Repository.swift */,
+				EFC75D802CFCD60000DF13F5 /* ReposFilter.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		EFC75D862CFE2D5B00DF13F5 /* ReposScene */ = {
+			isa = PBXGroup;
+			children = (
+				EFAE35EE2CFF935500E9B00A /* Flows */,
+				EFC75D872CFE2D6800DF13F5 /* ReposList */,
+			);
+			path = ReposScene;
+			sourceTree = "<group>";
+		};
+		EFC75D872CFE2D6800DF13F5 /* ReposList */ = {
+			isa = PBXGroup;
+			children = (
+				EFC75D892CFE2D8100DF13F5 /* ViewModel */,
+				EFC75D882CFE2D7A00DF13F5 /* View */,
+			);
+			path = ReposList;
+			sourceTree = "<group>";
+		};
+		EFC75D882CFE2D7A00DF13F5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EFD3D98A2CFE5AE200F7BFF2 /* ReposListCell.swift */,
+				EFD3D98B2CFE5AE200F7BFF2 /* ReposListCell.xib */,
+				EFD3D98E2CFE5C8600F7BFF2 /* ReposListViewController.swift */,
+				EFD3D98F2CFE5C8600F7BFF2 /* ReposListViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EFC75D892CFE2D8100DF13F5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EFC75D8A2CFE2D9F00DF13F5 /* ReposListViewModel.swift */,
+				EFC75D8C2CFE2DE100DF13F5 /* ReposListItem.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +411,9 @@
 			dependencies = (
 			);
 			name = GitReposApp;
+			packageProductDependencies = (
+				EFC75D622CFBC96B00DF13F5 /* RealmSwift */,
+			);
 			productName = GitReposApp;
 			productReference = EF0D8E672CFA4A8400F1ED63 /* GitReposApp.app */;
 			productType = "com.apple.product-type.application";
@@ -154,6 +425,7 @@
 				EF0D8E792CFA4A8A00F1ED63 /* Sources */,
 				EF0D8E7A2CFA4A8A00F1ED63 /* Frameworks */,
 				EF0D8E7B2CFA4A8A00F1ED63 /* Resources */,
+				EFC75D762CFC68EB00DF13F5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -161,6 +433,9 @@
 				EF0D8E7F2CFA4A8A00F1ED63 /* PBXTargetDependency */,
 			);
 			name = GitReposAppTests;
+			packageProductDependencies = (
+				EFC75D742CFC68EB00DF13F5 /* RealmSwift */,
+			);
 			productName = GitReposAppTests;
 			productReference = EF0D8E7D2CFA4A8A00F1ED63 /* GitReposAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -215,6 +490,9 @@
 				Base,
 			);
 			mainGroup = EF0D8E5E2CFA4A8400F1ED63;
+			packageReferences = (
+				EFC75D612CFBC96B00DF13F5 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = EF0D8E682CFA4A8400F1ED63 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -231,9 +509,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFD3D98D2CFE5AE200F7BFF2 /* ReposListCell.xib in Resources */,
 				EF0D8E772CFA4A8900F1ED63 /* LaunchScreen.storyboard in Resources */,
+				EFD3D9912CFE5C8600F7BFF2 /* ReposListViewController.xib in Resources */,
 				EF0D8E742CFA4A8900F1ED63 /* Assets.xcassets in Resources */,
-				EF0D8E722CFA4A8400F1ED63 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +537,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF0D8E6F2CFA4A8400F1ED63 /* ViewController.swift in Sources */,
+				EFC75D7C2CFCD3A200DF13F5 /* ReposListInteractor.swift in Sources */,
+				EFAE35ED2CFF8F3900E9B00A /* ReposSceneDIContainer.swift in Sources */,
+				EF0D8EA02CFA66BE00F1ED63 /* RemoteResponse.swift in Sources */,
+				EFD3D9902CFE5C8600F7BFF2 /* ReposListViewController.swift in Sources */,
+				EFC75D8D2CFE2DE100DF13F5 /* ReposListItem.swift in Sources */,
+				EFC75D7F2CFCD45600DF13F5 /* Repository.swift in Sources */,
+				EFD3D98C2CFE5AE200F7BFF2 /* ReposListCell.swift in Sources */,
+				EFC75D792CFC7B5100DF13F5 /* StorageManager.swift in Sources */,
+				EFC75D8B2CFE2DA000DF13F5 /* ReposListViewModel.swift in Sources */,
+				EF0D8EA22CFA6FB000F1ED63 /* EndpointType.swift in Sources */,
 				EF0D8E6B2CFA4A8400F1ED63 /* AppDelegate.swift in Sources */,
+				EFAE35F02CFF939600E9B00A /* ReposListFlowCoordinator.swift in Sources */,
+				EFC75D652CFBD06200DF13F5 /* StorageResponse.swift in Sources */,
+				EFC75D692CFBD85400DF13F5 /* StorageService.swift in Sources */,
+				EFAE35F22CFF956C00E9B00A /* AppFlowCoordinator.swift in Sources */,
+				EFE5F88C2D0107C600A79BD1 /* ImageLoader.swift in Sources */,
+				EFAE35EB2CFF8EFF00E9B00A /* AppDIContainer.swift in Sources */,
+				EFC75D812CFCD60000DF13F5 /* ReposFilter.swift in Sources */,
+				EFAE35E52CFF8B3000E9B00A /* RealmStorageService.swift in Sources */,
+				EF0D8E9C2CFA4CB700F1ED63 /* GithubEndpoint.swift in Sources */,
 				EF0D8E6D2CFA4A8400F1ED63 /* SceneDelegate.swift in Sources */,
+				EF0D8EA62CFB1E1B00F1ED63 /* RemoteManager.swift in Sources */,
+				EF0D8EA42CFA70B800F1ED63 /* NetworkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +567,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFAE35F92D00C62800E9B00A /* MockRemoteManager.swift in Sources */,
+				EFAE35FD2D00C9D600E9B00A /* MockError.swift in Sources */,
+				EFAE35F72D00C4C100E9B00A /* ReposListInteractorTests.swift in Sources */,
+				EF0D8EAD2CFB2A2F00F1ED63 /* MockURLProtocol.swift in Sources */,
+				EFAE35FB2D00C65E00E9B00A /* MockStorageManager.swift in Sources */,
+				EFC75D5F2CFB69E000DF13F5 /* MockNetworkService.swift in Sources */,
+				EF0D8EA82CFB1E9B00F1ED63 /* RemoteManagerTests.swift in Sources */,
+				EFC75D722CFC611300DF13F5 /* TestObject.swift in Sources */,
+				EFC75D702CFBE25600DF13F5 /* StorageServiceTests.swift in Sources */,
+				EFAE35E72CFF8BC800E9B00A /* MockStorageService.swift in Sources */,
+				EF0D8EAF2CFB2D3B00F1ED63 /* NetworkServiceTests.swift in Sources */,
+				EF0D8EB32CFB3D4E00F1ED63 /* MockModel.swift in Sources */,
+				EFC75D852CFE252500DF13F5 /* StorageManagerTests.swift in Sources */,
+				EF0D8EB12CFB34B000F1ED63 /* MockEndpoints.swift in Sources */,
 				EF0D8E822CFA4A8A00F1ED63 /* GitReposAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,14 +610,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		EF0D8E702CFA4A8400F1ED63 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EF0D8E712CFA4A8400F1ED63 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		EF0D8E752CFA4A8900F1ED63 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -442,9 +747,8 @@
 				INFOPLIST_FILE = GitReposApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -470,9 +774,8 @@
 				INFOPLIST_FILE = GitReposApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -602,6 +905,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EFC75D612CFBC96B00DF13F5 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = exactVersion;
+				version = 10.49.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EFC75D622CFBC96B00DF13F5 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EFC75D612CFBC96B00DF13F5 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+		EFC75D742CFC68EB00DF13F5 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EFC75D612CFBC96B00DF13F5 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EF0D8E5F2CFA4A8400F1ED63 /* Project object */;
 }
