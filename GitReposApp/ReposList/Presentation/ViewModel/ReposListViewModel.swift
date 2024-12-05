@@ -27,7 +27,7 @@ final class ReposListViewModelImpl: ReposListViewModel {
     var repos: AnyPublisher<[ReposListItem], Never> {
         _repos.map { repos in
             repos.map { repo in
-                ReposListItem(name: repo.name, details: repo.details, iconUrl: repo.userImageUrl, isFavorite: repo.isFavorite)
+                ReposListItem(id: repo.id, name: repo.name, details: repo.details, iconUrl: repo.userImageUrl, isFavorite: repo.isFavorite)
             }
         }.eraseToAnyPublisher()
     }
@@ -70,7 +70,7 @@ final class ReposListViewModelImpl: ReposListViewModel {
             self?._isLoading.send(false)
         }, receiveValue: { [weak self] in
             if let self {
-                self._repos.send(_repos.value + $0)
+                self._repos.send(self._repos.value + $0)
             }
         })
         .store(in: &cancellables)

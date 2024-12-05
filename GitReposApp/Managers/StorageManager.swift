@@ -11,7 +11,6 @@ import Combine
 
 protocol StorageManager {
 
-    
     func favoriteIds() -> AnyPublisher<Set<Int>, Error>
     func deletedIds() -> AnyPublisher<Set<Int>, Error>
     
@@ -55,8 +54,10 @@ final class RealmStorageManager: StorageManager {
     }
     
     func saveDeletedId(_ id: Int) -> AnyPublisher<Void, Error> {
-        response.deletedIds.insert(id)
-        let result = storage.saveOrUpdate(response)
+        
+        let result = storage.saveOrUpdate(response, { [weak self] in
+            self?.response.deletedIds.insert(id)
+        })
         switch result {
         case .success:
             return Just(()).setFailureType(to: Error.self).eraseToAnyPublisher()
@@ -66,8 +67,10 @@ final class RealmStorageManager: StorageManager {
     }
     
     func saveFavoriteId(_ id: Int) -> AnyPublisher<Void, Error> {
-        response.favoriteIds.insert(id)
-        let result = storage.saveOrUpdate(response)
+        
+        let result = storage.saveOrUpdate(response, { [weak self] in
+            self?.response.favoriteIds.insert(id)
+        })
         switch result {
         case .success:
             return Just(()).setFailureType(to: Error.self).eraseToAnyPublisher()
@@ -77,8 +80,9 @@ final class RealmStorageManager: StorageManager {
     }
     
     func removeFavoriteId(_ id: Int) -> AnyPublisher<Void, Error> {
-        response.favoriteIds.remove(id)
-        let result = storage.saveOrUpdate(response)
+        let result = storage.saveOrUpdate(response, { [weak self] in
+            self?.response.favoriteIds.remove(id)
+        })
         switch result {
         case .success:
             return Just(()).setFailureType(to: Error.self).eraseToAnyPublisher()

@@ -25,9 +25,7 @@ final class NetworkServiceImpl: NetworkService {
         guard let url = endpoint.components.url, !url.absoluteString.isEmpty else {
             throw URLError(.badURL)
         }
-        
         let request = URLRequest(url: url)
-    
         return try await withCheckedThrowingContinuation { continuation in
             let task = urlSession.dataTask(with: request) { data, responce, error in
                 if let error {

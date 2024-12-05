@@ -24,6 +24,7 @@
 		EF0D8EAF2CFB2D3B00F1ED63 /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0D8EAE2CFB2D3B00F1ED63 /* NetworkServiceTests.swift */; };
 		EF0D8EB12CFB34B000F1ED63 /* MockEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0D8EB02CFB34B000F1ED63 /* MockEndpoints.swift */; };
 		EF0D8EB32CFB3D4E00F1ED63 /* MockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0D8EB22CFB3D4E00F1ED63 /* MockModel.swift */; };
+		EF7F543D2D02556C00C27CDC /* MostStarsScene.png in Resources */ = {isa = PBXBuildFile; fileRef = EF7F543C2D02556C00C27CDC /* MostStarsScene.png */; };
 		EFAE35E52CFF8B3000E9B00A /* RealmStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAE35E42CFF8B3000E9B00A /* RealmStorageService.swift */; };
 		EFAE35E72CFF8BC800E9B00A /* MockStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAE35E62CFF8BC800E9B00A /* MockStorageService.swift */; };
 		EFAE35EB2CFF8EFF00E9B00A /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAE35EA2CFF8EFF00E9B00A /* AppDIContainer.swift */; };
@@ -109,6 +110,7 @@
 		EF0D8EAE2CFB2D3B00F1ED63 /* NetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
 		EF0D8EB02CFB34B000F1ED63 /* MockEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEndpoints.swift; sourceTree = "<group>"; };
 		EF0D8EB22CFB3D4E00F1ED63 /* MockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockModel.swift; sourceTree = "<group>"; };
+		EF7F543C2D02556C00C27CDC /* MostStarsScene.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MostStarsScene.png; sourceTree = "<group>"; };
 		EFAE35E42CFF8B3000E9B00A /* RealmStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmStorageService.swift; sourceTree = "<group>"; };
 		EFAE35E62CFF8BC800E9B00A /* MockStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockStorageService.swift; sourceTree = "<group>"; };
 		EFAE35EA2CFF8EFF00E9B00A /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
@@ -189,16 +191,14 @@
 		EF0D8E692CFA4A8400F1ED63 /* GitReposApp */ = {
 			isa = PBXGroup;
 			children = (
+				EF0D8E782CFA4A8900F1ED63 /* Info.plist */,
+				EF7F543A2D0254D600C27CDC /* Resources */,
 				EFAE35E82CFF8E7900E9B00A /* Application */,
-				EFC75D862CFE2D5B00DF13F5 /* ReposScene */,
+				EFC75D862CFE2D5B00DF13F5 /* ReposList */,
 				EFC75D7D2CFCD44000DF13F5 /* Common */,
-				EFC75D7A2CFCD17500DF13F5 /* Interactors */,
 				EFC75D602CFBC4BF00DF13F5 /* RealmStorage */,
 				EF0D8EA92CFB21C000F1ED63 /* Managers */,
 				EF0D8E9A2CFA4B0700F1ED63 /* Networking */,
-				EF0D8E732CFA4A8900F1ED63 /* Assets.xcassets */,
-				EF0D8E752CFA4A8900F1ED63 /* LaunchScreen.storyboard */,
-				EF0D8E782CFA4A8900F1ED63 /* Info.plist */,
 			);
 			path = GitReposApp;
 			sourceTree = "<group>";
@@ -267,6 +267,24 @@
 				EFAE35FC2D00C9D600E9B00A /* MockError.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		EF7F543A2D0254D600C27CDC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EF7F543B2D02553E00C27CDC /* Screenshots */,
+				EF0D8E732CFA4A8900F1ED63 /* Assets.xcassets */,
+				EF0D8E752CFA4A8900F1ED63 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EF7F543B2D02553E00C27CDC /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				EF7F543C2D02556C00C27CDC /* MostStarsScene.png */,
+			);
+			path = Screenshots;
 			sourceTree = "<group>";
 		};
 		EFAE35E82CFF8E7900E9B00A /* Application */ = {
@@ -357,22 +375,23 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
-		EFC75D862CFE2D5B00DF13F5 /* ReposScene */ = {
+		EFC75D862CFE2D5B00DF13F5 /* ReposList */ = {
 			isa = PBXGroup;
 			children = (
+				EFC75D7A2CFCD17500DF13F5 /* Interactors */,
 				EFAE35EE2CFF935500E9B00A /* Flows */,
-				EFC75D872CFE2D6800DF13F5 /* ReposList */,
+				EFC75D872CFE2D6800DF13F5 /* Presentation */,
 			);
-			path = ReposScene;
+			path = ReposList;
 			sourceTree = "<group>";
 		};
-		EFC75D872CFE2D6800DF13F5 /* ReposList */ = {
+		EFC75D872CFE2D6800DF13F5 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
 				EFC75D892CFE2D8100DF13F5 /* ViewModel */,
 				EFC75D882CFE2D7A00DF13F5 /* View */,
 			);
-			path = ReposList;
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 		EFC75D882CFE2D7A00DF13F5 /* View */ = {
@@ -510,6 +529,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFD3D98D2CFE5AE200F7BFF2 /* ReposListCell.xib in Resources */,
+				EF7F543D2D02556C00C27CDC /* MostStarsScene.png in Resources */,
 				EF0D8E772CFA4A8900F1ED63 /* LaunchScreen.storyboard in Resources */,
 				EFD3D9912CFE5C8600F7BFF2 /* ReposListViewController.xib in Resources */,
 				EF0D8E742CFA4A8900F1ED63 /* Assets.xcassets in Resources */,

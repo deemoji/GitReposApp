@@ -10,8 +10,8 @@ import RealmSwift
 
 final class StorageResponse: Object {
     @Persisted(primaryKey: true) var id: Int = 1
-    var favoriteIds: MutableSet<Int> = .init()
-    var deletedIds: MutableSet<Int> = .init()
+    @Persisted var favoriteIds: MutableSet<Int> = .init()
+    @Persisted var deletedIds: MutableSet<Int> = .init()
 }
 
 final class LocalRepository: Object {

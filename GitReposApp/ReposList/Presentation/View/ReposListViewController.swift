@@ -10,6 +10,9 @@ import Combine
 
 final class ReposListViewController: UIViewController {
     
+    typealias DataSource = UITableViewDiffableDataSource<Int, ReposListItem>
+    typealias Snapshot = NSDiffableDataSourceSnapshot<Int, ReposListItem>
+    
     static func create(with viewModel: ReposListViewModel, imageLoader: ImageLoader? = nil) -> ReposListViewController {
         let reposListVC = ReposListViewController(nibName: "ReposListViewController", bundle: nil)
         reposListVC.viewModel = viewModel
@@ -19,8 +22,29 @@ final class ReposListViewController: UIViewController {
     
     var viewModel: ReposListViewModel!
     var imageLoader: ImageLoader?
+    lazy private var dataSource: DataSource = {
+        let dataSource = DataSource(tableView: tableView) { [weak self] tableView, indexPath, item in
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: ReposListCell.identifier) as? ReposListCell else {
+                return UITableViewCell()
+            }
+            cell.configure(with: item) { [weak self] in
+                
+                self?.viewModel.switchFavorite(forItemAt: indexPath.row)
+            }
+            let url = item.iconUrl
+            cell.setIcon(nil)
+            self?.imageLoader?.loadImage(from: item.iconUrl, completion: { [weak self] in
+                guard let self else { return }
+                if(item.iconUrl == url) {
+                    cell.setIcon($0)
+                }
+                
+            })
+            return cell
+        }
+        return dataSource
+    }()
     
-    private var items: [ReposListItem] = []
     private var isLoading: Bool = false
     private var cancellables: Set<AnyCancellable> = .init()
     
@@ -39,14 +63,13 @@ final class ReposListViewController: UIViewController {
     }
     
     private func setupViews() {
+        self.title = "Git Repositories"
         setupTableView()
         setupSegmentedControl()
     }
     private func setupTableView() {
         tableView.register(UINib(nibName: ReposListCell.identifier, bundle: nil), forCellReuseIdentifier: ReposListCell.identifier)
         tableView.delegate = self
-        tableView.dataSource = self
-        tableView.prefetchDataSource = self
     }
     
     private func setupSegmentedControl() {
@@ -63,8 +86,7 @@ final class ReposListViewController: UIViewController {
     
     private func bindViewModel() {
         viewModel.repos.sink { [weak self] in
-            self?.items = $0
-            self?.tableView.reloadData()
+            self?.update($0)
         }.store(in: &cancellables)
         viewModel.isLoading.sink { [weak self] in
             self?.tableView.estimatedSectionFooterHeight = $0 ? 60.0 : 0.0
@@ -76,10 +98,14 @@ final class ReposListViewController: UIViewController {
 }
 
 // MARK:  - Table View Delegates
-extension ReposListViewController: UITableViewDelegate, UITableViewDataSource {
+extension ReposListViewController: UITableViewDelegate {
     
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if indexPath.row == items.count - 1 {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let currentOffset = scrollView.contentOffset.y
+        let maximumOffset = scrollView.contentSize.height - scrollView.frame.size.height
+        let deltaOffset = maximumOffset - currentOffset
+        
+        if deltaOffset <= 0 {
             viewModel.loadNextPosts()
         }
     }
@@ -94,9 +120,6 @@ extension ReposListViewController: UITableViewDelegate, UITableViewDataSource {
         return UITableView.automaticDimension
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
-    }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let item = UIContextualAction(style: .destructive, title: "Delete") { [weak self] contextualAction, view, boolValue in
@@ -106,28 +129,13 @@ extension ReposListViewController: UITableViewDelegate, UITableViewDataSource {
         return UISwipeActionsConfiguration(actions: [item])
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: ReposListCell.identifier) as? ReposListCell else {
-            return UITableViewCell()
-        }
-        cell.configure(with: items[indexPath.row]) { [weak self] in
-            self?.viewModel.switchFavorite(forItemAt: indexPath.row)
-        }
-        imageLoader?.loadImage(from: items[indexPath.row].iconUrl, completion: {
-            cell.setIcon($0)
-        })
-        return cell
-    }
 }
 
-extension ReposListViewController: UITableViewDataSourcePrefetching {
-    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
-        let urlsToPrefetch = items.map {
-            $0.iconUrl
-        }
-        
-        for url in urlsToPrefetch {
-            imageLoader?.loadImage(from: url) { _ in }
-        }
+extension ReposListViewController {
+    func update(_ items: [ReposListItem]) {
+        var snapshot = Snapshot()
+        snapshot.appendSections([0])
+        snapshot.appendItems(items)
+        dataSource.apply(snapshot, animatingDifferences: false)
     }
 }

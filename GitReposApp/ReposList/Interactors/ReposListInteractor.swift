@@ -22,7 +22,7 @@ final class ReposListInteractorImpl: ReposListInteractor {
     let storageManager: StorageManager
     
     private let query = "Swift"
-    private(set) var currentPage = 0
+    private(set) var currentPage = 1
     private(set) var currentFilter: ReposFilter = .mostStars
     
     init(_ remoteManager: RemoteManager, _ storageManager: StorageManager) {
@@ -33,7 +33,7 @@ final class ReposListInteractorImpl: ReposListInteractor {
     func switchFilter(_ filter: ReposFilter) {
         remoteManager.cancel()
         currentFilter = filter
-        currentPage = 0
+        currentPage = 1
     }
     
     func nextRepos() -> AnyPublisher<[Repository], Error> {

@@ -15,7 +15,7 @@ protocol RemoteManager: AnyObject {
 final class GithubRemoteManager: RemoteManager {
     
     private let network: NetworkService
-    private let itemsPerPage = 30
+    private let itemsPerPage = 35
     
     init(network: NetworkService) {
         self.network = network

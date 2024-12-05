@@ -11,11 +11,7 @@ import RealmSwift
 final class AppDIContainer {
     
     var networkService: NetworkService = NetworkServiceImpl()
-    var storageService: StorageService = RealmStorageService(configuration:  Realm.Configuration(
-        inMemoryIdentifier: "NewTestRealm",
-        schemaVersion: 1,
-        deleteRealmIfMigrationNeeded: true
-    ))
+    var storageService: StorageService = RealmStorageService(configuration:  .defaultConfiguration)
     var imageLoader: ImageLoader = ImageLoaderImpl()
     
     func makeReposSceneDIContainer() -> ReposSceneDIContainer {

@@ -16,6 +16,8 @@ final class ReposListCell: UITableViewCell {
     @IBOutlet private weak var icon: UIImageView!
     @IBOutlet weak var favoriteButton: UIButton!
     
+    private var isFavorited: Bool = false
+    
     private var action: (() -> Void)?
     
     override func awakeFromNib() {
@@ -32,6 +34,7 @@ extension ReposListCell {
         nameLabel.text = item.name
         detailsLabel.text = item.details
         favoriteButton.setImage(UIImage(systemName: item.isFavorite ? "heart.fill" : "heart"), for: .normal)
+        isFavorited = item.isFavorite
         action = buttonAction
     }
     

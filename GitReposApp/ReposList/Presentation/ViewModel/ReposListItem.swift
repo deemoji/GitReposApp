@@ -7,9 +7,12 @@
 
 import Foundation
 
-struct ReposListItem {
+struct ReposListItem: Hashable {
+    let id: Int
     let name: String
     let details: String
     let iconUrl: String
     let isFavorite: Bool
+    
 }
+
